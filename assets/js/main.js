@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionsList.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 200) {
+            if (window.pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });

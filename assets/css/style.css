@@ -397,13 +397,22 @@ body {
 .specialty-image {
   aspect-ratio: 16/10;
   overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
 }
 
 .specialty-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+  transition: opacity 0.3s ease;
+}
+
+.specialty-image img[loading="lazy"] {
+  opacity: 0;
+}
+
+.specialty-image img.loaded {
+  opacity: 1;
 }
 
 .specialty-card:hover .specialty-image img {
