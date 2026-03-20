@@ -289,6 +289,7 @@ body {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: var(--radius);
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
 }
 
 .hero-image img {
@@ -297,6 +298,16 @@ body {
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow-hover);
+  transition: opacity 0.3s ease;
+}
+
+.hero-image img[loading="lazy"] {
+  opacity: 0;
+}
+
+.hero-image img.loaded,
+.hero-image img:not([loading="lazy"]) {
+  opacity: 1;
 }
 
 .hero-floating {
